@@ -1,43 +1,37 @@
+@import url("https://fonts.googleapis.com/css?family=Dosis&display=swap");
+
 * {
   box-sizing: border-box;
 }
 
+:root {
+  --primary-color: #ffd9aa;
+  --secondary-color: #855928;
+}
+
 body {
-  background-color: #2c3e50;
+  background-color: var(--primary-color);
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   margin: 0;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-button {
-  cursor: pointer;
-  font-size: 14px;
-  border-radius: 4px;
-  padding: 5px 15px;
+  font-family: "Dosis", sans-serif;
 }
 
 select {
-  width: 200px;
+  width: 120px;
   padding: 5px;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  border-radius: 0;
-  background-color: #a7c5e3;
-}
-
-select:focus,
-button:focus {
-  outline: 0;
-}
-
-.settings-btn {
-  position: absolute;
-  bottom: 30px;
-  left: 30px;
+  margin-left: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+  background-color: #ffd9aa;
+  color: var(--secondary-color);
+  font-family: "Dosis", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
 }
 
 .settings {
@@ -45,9 +39,10 @@ button:focus {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
   height: 70px;
-  color: #fff;
+  color: var(--secondary-color);
+  font-size: 24px;
+  font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,34 +55,52 @@ button:focus {
 }
 
 .container {
-  background-color: #34495e;
+  background-color: #ffbf71;
   padding: 20px;
   border-radius: 4px;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
-  color: #fff;
+  color: #000;
   position: relative;
   text-align: center;
-  width: 500px;
+  width: 700px;
+  height: 350px;
 }
 
 h2 {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
   padding: 8px;
   border-radius: 4px;
   margin: 0 0 40px;
+  font-size: 30px;
+}
+
+p {
+  font-size: 24px;
+  margin-top: 30px;
+  margin-bottom: 5px;
+}
+
+p.small {
+  font-size: 24px;
+  margin-top: 70px;
 }
 
 h1 {
-  margin: 0;
+  margin-bottom: 5px;
+  margin-top: 20px;
+  font-size: 34px;
 }
 
 input {
   border: 0;
   border-radius: 4px;
-  font-size: 14px;
+  font-size: 30px;
   width: 300px;
   padding: 12px 20px;
   margin-top: 10px;
+  font-family: "Dosis", sans-serif;
+  text-align: center;
 }
 
 .score-container {
@@ -114,4 +127,19 @@ input {
   width: 100%;
   height: 100%;
   z-index: 1;
+}
+
+button {
+  cursor: pointer;
+  font-size: 22px;
+  border-radius: 4px;
+  padding: 5px 15px;
+  margin-top: 30px;
+  font-family: "Dosis", sans-serif;
+}
+
+select:focus,
+button:focus,
+input:focus {
+  outline: 0;
 }
